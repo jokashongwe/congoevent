@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +26,22 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.cex-search-elt{
+  width: 10rem;
+  overflow: hidden;
+}
+
+.cex-search-bar{
+  width: 80vw;
+}
+
+.cex-search-title{
+  width: 80vw;
+}
+
+.cex-bg-hero {
+  background: url(/images/wedding-reception-g9bee4e633_1280.jpg) rgba(0, 0, 0, 0.5);
+  height: 90vh;
 }
