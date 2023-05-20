@@ -47,9 +47,9 @@ export default function Prestataire(props) {
     ]
     return (
         <div className="flex w-full  px-6 py-12 items-center justify-center flex-col">
-            <h2 className={playfair.className + " mb-2 text-2xl text-gray-800 md:text-3xl font-semibold"} >Que recherchez-vous pour votre événement ?</h2>
-            <p className={inter.className + " mb-2 text-gray-700"} >Pour un événement réussi, nous gérons tous les prestataires dont vous avez besoin.</p>
-            <div className="grid grid-cols-6 gap-y-6 gap-x-6 divide-x mt-10 mt-3">
+            <h2 className={playfair.className + " mb-2 text-2xl text-center text-gray-800 md:text-3xl font-semibold"} >Que recherchez-vous pour votre événement ?</h2>
+            <p className={inter.className + " mb-2 text-gray-700 text-center"} >Pour un événement réussi, nous gérons tous les prestataires dont vous avez besoin.</p>
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-y-6 gap-x-6 divide-x mt-10 mt-3">
                 {prestataires.map((item) => <PrestataireItem item={item} key={item.name} />)}
             </div>
         </div>
