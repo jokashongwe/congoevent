@@ -1,6 +1,7 @@
 "use client";
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+
 import {
   SwatchIcon,
   TicketIcon,
@@ -16,6 +17,7 @@ import {
 import { ChevronDownIcon, PlayCircleIcon, PhoneIcon } from '@heroicons/react/20/solid'
 
 import { Prata, Inter } from 'next/font/google'
+import Image from 'next/image';
 const playfair = Inter({ subsets: ['latin'] })
 
 const products = [
@@ -131,7 +133,7 @@ export default function Menu() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Congo Events</span>
-              <img
+              <Image
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=red&shade=600"
                 alt=""
