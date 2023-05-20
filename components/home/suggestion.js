@@ -10,7 +10,7 @@ const playfair = Playfair_Display({ subsets: ['latin'] })
 
 function SuggestionItem({ item }) {
     return (
-        <div className="md:max-w-sm overflow-hidden shadow-xs md:shadow-lg pt-6 pb-6 w-full">
+        <div className=" md:max-w-sm overflow-hidden shadow-xs md:shadow-lg pt-6 pb-6">
             <Image width={1280} height={840} className="w-full" src={item.image} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
                 <div>
@@ -34,9 +34,9 @@ export default function Suggestion(props) {
         { 'name': 'Splendide Salle', 'address': '12, Bangala, Kitambo', 'price': '1150', 'image': '/images/wedding-reception-g9bee4e633_1280.jpg', 'types': ['REUNION'], 'description': "Lorem Ipsum is simply dummy text of the printing and typesetting industry." }
     ]
     return (
-        <div className="flex flex-col justify-center item-center w-full" >
+        <div className="flex flex-col justify-center md:mt-10 md:mb-10 item-center w-full" >
             <h3 className={playfair.className + " text-2xl md:text-3xl text-center font-semibold text-gray-700 pt-6 pb-0"} >Nos suggestions de lieux</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 w-full  gap-y-4 md:gap-x-4 " >
+            <div className="grid grid-cols-1 md:flex md:flex-row md:items-center md:justify-center md:px-10 w-full md:gap-x-4  gap-y-4" >
                 {items.map((item) => <SuggestionItem key={item.name} item={item} />)}
             </div>
         </div>
