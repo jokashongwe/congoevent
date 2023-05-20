@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './node_modules/flowbite/**/*.js',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
