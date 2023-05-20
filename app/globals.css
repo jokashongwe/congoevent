@@ -37,6 +37,11 @@ body {
   .cex-search-elt{
     width: 100%;
   }
+
+  .cex-bg-hero {
+    height: 50vh !important;
+  }
+  
 }
 
 .cex-search-bar{
