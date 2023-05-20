@@ -15,17 +15,19 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlayCircleIcon, PhoneIcon } from '@heroicons/react/20/solid'
 
+import { Prata, Inter } from 'next/font/google'
+const playfair = Inter({ subsets: ['latin'] })
+
 const products = [
-  { name: 'Lieux de réception', description: 'Get a better understanding of your traffic', href: '#', icon: HomeIcon },
-  { name: 'Service traiteur', description: 'Speak directly to your customers', href: '#', icon: ArchiveBoxIcon },
-  { name: 'Animateurs', description: 'Your customers’ data will be safe and secure', href: '#', icon: UserGroupIcon },
-  { name: 'Décorations', description: 'Connect with third-party tools', href: '#', icon: GiftIcon },
-  { name: 'Location de materiel & voiture', description: 'Build strategic funnels that will convert', href: '#', icon: SwatchIcon },
-  { name: 'Wedding planner & billetterie', description: 'Build strategic funnels that will convert', href: '#', icon: TicketIcon },
+  { name: 'Lieux de réception', description: 'Trouvez le lieux parfait pour votre événement', href: '#', icon: HomeIcon },
+  { name: 'Service traiteur', description: 'Des dizaines de prestataire au meilleur prix', href: '#', icon: ArchiveBoxIcon },
+  { name: 'Décoration', description: 'Une expertise avec de nombreux clients satisfait', href: '#', icon: GiftIcon },
+  { name: 'Location de materiel et voiture', description: 'Sonorisation, tourniquet photo, voiture ,jeep...', href: '#', icon: SwatchIcon },
+  { name: 'Event planner', description: 'Billeterie, check in des invités, service de tables... ', href: '#', icon: TicketIcon },
 ]
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Nos réalisations', href: '#', icon: PlayCircleIcon },
+  { name: 'Contactez-nous', href: '#', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
@@ -40,8 +42,8 @@ export default function Menu() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Congo Events</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=red&shade=600" alt="" />
+            <span className="sr-only">Quality</span>
+            <h4 className={playfair.className + ' text-3xl text-red-700'} >Quality</h4>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -57,7 +59,7 @@ export default function Menu() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              Services
+              Nos Services
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
 
@@ -71,7 +73,7 @@ export default function Menu() {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                <div className="p-4">
+                <div className="p-4 ">
                   {products.map((item) => (
                     <div
                       key={item.name}
@@ -117,9 +119,9 @@ export default function Menu() {
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <button href="#" className="rounded-full bg-red-500 hover:bg-red-800 px-3 py-2 flex items-center justify-center gap-x-2 text-sm font-semibold leading-6 text-white">
+          <button href="#" className="bg-red-500 hover:bg-red-800 px-3 py-2 flex items-center justify-center gap-x-2 text-sm font-semibold leading-6 text-white">
             <EnvelopeIcon className="h-6 w-6 text-white group-hover:text-white" aria-hidden="true" />
-            Contactez-nous  
+            Contactez-nous
           </button>
         </div>
       </nav>
@@ -192,12 +194,10 @@ export default function Menu() {
                 </a>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Contactez-nous 
-                </a>
+                <button href="#" className="rounded-full bg-red-500 hover:bg-red-800 px-3 py-2 flex items-center justify-center gap-x-2 text-sm font-semibold leading-6 text-white">
+                  <EnvelopeIcon className="h-6 w-6 text-white group-hover:text-white" aria-hidden="true" />
+                  Contactez-nous
+                </button>
               </div>
             </div>
           </div>

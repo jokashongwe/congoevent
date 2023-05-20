@@ -33,6 +33,12 @@ body {
   overflow: hidden;
 }
 
+@media screen and  (max-width: 768px) {
+  .cex-search-elt{
+    width: 100%;
+  }
+}
+
 .cex-search-bar{
   width: 80vw;
 }
@@ -43,5 +49,5 @@ body {
 
 .cex-bg-hero {
   background: url(/images/wedding-reception-g9bee4e633_1280.jpg) rgba(0, 0, 0, 0.5);
-  height: 90vh;
+  height: 88vh;
 }
