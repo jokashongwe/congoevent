@@ -20,9 +20,7 @@ function SuggestionItem({ item }) {
                 </div>
             </div>
             <div className="px-6 pt-1 pb-1">
-                {item.types && item.types.map((type) => (
-                    <span key={type} className="inline-block bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{type}</span>
-                ))}
+                <a href="#" className="inline-block bg-gray-300 px-3 py-3 shadow-sm text-sm font-semibold text-gray-700 mr-2 mb-2">EN SAVOIR PLUS</a>
             </div>
         </div>
     )
