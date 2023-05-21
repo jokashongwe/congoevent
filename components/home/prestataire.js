@@ -25,7 +25,7 @@ function PrestataireItem({ item }) {
     return (
         <a href="#" className="flex flex-col items-center shadow-sm border border-gray-200 px-6 py-5">
             <item.icon className=" h-6 w-6 text-red-500 text-center mb-2" />
-            <span className={inter.className + " text-xs text-gray-700 hover:text-red-500"} >{item.name}</span>
+            <span className={inter.className + " text-xs text-gray-700 hover:text-red-500 text-center"} >{item.name}</span>
         </a>
     )
 }
